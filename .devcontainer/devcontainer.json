@@ -1,0 +1,17 @@
+// See https://containers.dev/implementors/json_reference/
+{
+    "dockerFile": "Dockerfile",
+
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-toolsai.jupyter"
+	],
+
+	// X11 forwarding
+	"runArgs": [
+		"--network=host",
+		"--volume=/tmp/.X11-unix:/tmp/.X11-unix",
+		"--env='DISPLAY=$DISPLAY'",
+	],
+}
